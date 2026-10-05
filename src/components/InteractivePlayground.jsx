@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Zap, Sparkles, ShieldCheck, Clock, Terminal, Trophy } from 'lucide-react';
+import { Play, Zap, Sparkles, ShieldCheck, Clock, Terminal } from 'lucide-react';
 import { SCENARIOS } from '../data/scenarios';
 
 export default function InteractivePlayground({ useRealOllama, ollamaStatus }) {
@@ -156,26 +156,8 @@ export default function InteractivePlayground({ useRealOllama, ollamaStatus }) {
           })}
         </div>
 
-        {/* Winner Highlight */}
-        <div style={{ 
-          marginTop: '12px', 
-          background: currentScenario.winner === 'LLaMA' ? '#f5f3ff' : '#ecfdf5', 
-          border: `1px solid ${currentScenario.winner === 'LLaMA' ? '#c4b5fd' : '#a7f3d0'}`, 
-          padding: '8px 12px', 
-          borderRadius: '8px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-          fontSize: '0.85rem'
-        }}>
-          <Trophy size={16} color={currentScenario.winner === 'LLaMA' ? '#6d28d9' : '#047857'} />
-          <span style={{ color: currentScenario.winner === 'LLaMA' ? '#5b21b6' : '#065f46', fontWeight: 600 }}>
-            <strong>Preferred Model: {currentScenario.winner}</strong> — {currentScenario.winnerReason}
-          </span>
-        </div>
-
         {/* Input Prompt Box */}
-        <div style={{ marginTop: '12px' }}>
+        <div style={{ marginTop: '14px' }}>
           <label style={{ fontSize: '0.75rem', fontWeight: 700, color: '#475569', display: 'block', marginBottom: '4px' }}>
             INPUT PROMPT:
           </label>
@@ -206,8 +188,6 @@ export default function InteractivePlayground({ useRealOllama, ollamaStatus }) {
           
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              
-              {/* Perfectly centered circular icon container for JEV */}
               <div style={{ 
                 width: '38px', 
                 height: '38px', 
@@ -273,8 +253,6 @@ export default function InteractivePlayground({ useRealOllama, ollamaStatus }) {
           
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              
-              {/* Perfectly centered circular icon container for LLaMA */}
               <div style={{ 
                 width: '38px', 
                 height: '38px', 
