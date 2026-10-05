@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, Terminal, Zap, RefreshCw, GraduationCap, Sparkles, ShieldCheck } from 'lucide-react';
+import { Activity, Terminal, Zap, RefreshCw, Sparkles } from 'lucide-react';
 
 import InteractivePlayground from './components/InteractivePlayground';
 import MetricsBenchmark from './components/MetricsBenchmark';
@@ -33,27 +33,6 @@ export default function App() {
   return (
     <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '24px 16px 60px 16px' }}>
       
-      {/* EDUCATIONAL DISCLAIMER BANNER */}
-      <div style={{ 
-        background: '#eff6ff', 
-        border: '1px solid #bfdbfe', 
-        color: '#1e40af', 
-        padding: '10px 18px', 
-        borderRadius: '12px', 
-        fontSize: '0.85rem', 
-        fontWeight: 600, 
-        marginBottom: '16px',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '10px',
-        boxShadow: '0 2px 6px rgba(30, 64, 175, 0.05)'
-      }}>
-        <GraduationCap size={20} color="#2563eb" style={{ flexShrink: 0 }} />
-        <div>
-          <strong>Educational Workshop Notice:</strong> This interactive lab is created exclusively for educational & student workshop demonstrations comparing <strong>System 1 Decision Engine (JEV)</strong> vs <strong>System 2 Auto-regressive LLM (LLaMA)</strong>.
-        </div>
-      </div>
-
       {/* QUICK REFERENCE 1-LINE GUIDANCE CARD */}
       <div style={{ 
         display: 'grid', 
