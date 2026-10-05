@@ -120,7 +120,7 @@ export default function InteractivePlayground({ useRealOllama, ollamaStatus }) {
         </div>
 
         {/* Scenario Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '10px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
           {SCENARIOS.map(s => {
             const isSelected = selectedScenarioId === s.id;
             const isLlamaWinner = s.winner === 'LLaMA';
@@ -136,19 +136,19 @@ export default function InteractivePlayground({ useRealOllama, ollamaStatus }) {
                     ? (isLlamaWinner ? '2px solid #8b5cf6' : '2px solid #10b981')
                     : '1px solid #e2e8f0',
                   borderRadius: '10px',
-                  padding: '12px',
+                  padding: '10px 12px',
                   textAlign: 'left',
                   cursor: 'pointer',
                   transition: 'all 0.2s ease',
                   color: '#0f172a'
                 }}
               >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2px' }}>
-                  <span style={{ fontWeight: 700, fontSize: '0.875rem' }}>{s.title}</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontWeight: 700, fontSize: '0.85rem' }}>{s.title}</span>
                   {isLlamaWinner ? (
-                    <span className="winner-badge-llama" style={{ fontSize: '0.7rem', padding: '2px 8px' }}>LLaMA Wins</span>
+                    <span className="winner-badge-llama" style={{ fontSize: '0.65rem', padding: '2px 6px' }}>LLaMA</span>
                   ) : (
-                    <span className="winner-badge-jev" style={{ fontSize: '0.7rem', padding: '2px 8px' }}>JEV Wins</span>
+                    <span className="winner-badge-jev" style={{ fontSize: '0.65rem', padding: '2px 6px' }}>JEV</span>
                   )}
                 </div>
               </button>
@@ -161,7 +161,7 @@ export default function InteractivePlayground({ useRealOllama, ollamaStatus }) {
           marginTop: '12px', 
           background: currentScenario.winner === 'LLaMA' ? '#f5f3ff' : '#ecfdf5', 
           border: `1px solid ${currentScenario.winner === 'LLaMA' ? '#c4b5fd' : '#a7f3d0'}`, 
-          padding: '10px 14px', 
+          padding: '8px 12px', 
           borderRadius: '8px',
           display: 'flex',
           alignItems: 'center',
@@ -191,7 +191,7 @@ export default function InteractivePlayground({ useRealOllama, ollamaStatus }) {
               color: '#38bdf8',
               fontFamily: 'var(--font-mono)',
               fontSize: '0.825rem',
-              minHeight: '50px',
+              minHeight: '46px',
               resize: 'vertical'
             }}
           />
@@ -205,8 +205,23 @@ export default function InteractivePlayground({ useRealOllama, ollamaStatus }) {
         <div className={`glass-panel ${jevState ? 'jev-border' : ''}`} style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
           
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <Zap size={20} color="#059669" />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              
+              {/* Perfectly centered circular icon container for JEV */}
+              <div style={{ 
+                width: '38px', 
+                height: '38px', 
+                borderRadius: '50%', 
+                background: '#ecfdf5', 
+                border: '1px solid #a7f3d0', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                flexShrink: 0
+              }}>
+                <Zap size={20} color="#059669" />
+              </div>
+
               <h3 className="gradient-text-jev" style={{ fontSize: '1.1rem', fontWeight: 800 }}>JEV AI Model</h3>
             </div>
             <span className="jev-badge">⚡ Decision Classifier</span>
@@ -257,8 +272,23 @@ export default function InteractivePlayground({ useRealOllama, ollamaStatus }) {
         <div className={`glass-panel ${llamaState || llamaStreamText ? 'llama-border' : ''}`} style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
           
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <Sparkles size={20} color="#7c3aed" />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              
+              {/* Perfectly centered circular icon container for LLaMA */}
+              <div style={{ 
+                width: '38px', 
+                height: '38px', 
+                borderRadius: '50%', 
+                background: '#f5f3ff', 
+                border: '1px solid #ddd6fe', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                flexShrink: 0
+              }}>
+                <Sparkles size={20} color="#7c3aed" />
+              </div>
+
               <h3 className="gradient-text-llama" style={{ fontSize: '1.1rem', fontWeight: 800 }}>LLaMA Model</h3>
             </div>
             <span className="llama-badge">🦙 Generative LLM</span>
