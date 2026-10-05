@@ -5,11 +5,21 @@
 
 ---
 
+### 📌 Quick Reference: Which Model Should You Use?
+
+* ⚡ **JEV AI Model (System 1 Decision Engine):**  
+  * **Use JEV when you need:** Sub-10ms intent classification, automated payment fraud scoring, CI/CD code security guardrails, and 100% deterministic JSON schemas with zero hallucination risk.
+  
+* 🦙 **LLaMA Model (System 2 Generative LLM):**  
+  * **Use LLaMA when you need:** Open-ended creative writing, fluid storytelling, empathetic conversational support chat, and multi-step Chain-of-Thought math or logic reasoning.
+
+---
+
 ## 🌟 Overview
 
 When building modern AI-powered applications, choosing the right model paradigm is critical:
-* **JEV AI Model (System 1 Decision Engine):** Non-autoregressive model optimized for sub-10ms intent classification, deterministic schema routing, zero hallucination risk, and 100x lower latency.
-* **LLaMA Model (System 2 Generative LLM):** Auto-regressive transformer model optimized for open-ended creative writing, storytelling, multi-step Chain-of-Thought reasoning, and fluid natural language generation.
+* **JEV AI Model:** Non-autoregressive model optimized for sub-10ms intent classification, deterministic schema routing, zero hallucination risk, and 100x lower latency.
+* **LLaMA Model:** Auto-regressive transformer model optimized for open-ended creative writing, storytelling, multi-step Chain-of-Thought reasoning, and fluid natural language generation.
 
 ---
 
