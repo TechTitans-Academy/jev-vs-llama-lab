@@ -34,17 +34,17 @@ export default function App() {
     <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '24px 16px 60px 16px' }}>
       
       {/* HEADER BAR */}
-      <header className="glass-panel" style={{ padding: '20px 24px', marginBottom: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
+      <header className="glass-panel" style={{ padding: '16px 24px', marginBottom: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
         
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <span style={{ fontSize: '1.8rem' }}>🧠</span>
-            <h1 className="gradient-text-title" style={{ fontSize: '1.6rem', fontWeight: 800, color: '#0f172a' }}>
-              JEV AI vs LLaMA Model Educational Lab
+            <span style={{ fontSize: '1.6rem' }}>🧠</span>
+            <h1 className="gradient-text-title" style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0f172a' }}>
+              JEV vs LLaMA Model Lab
             </h1>
           </div>
-          <p style={{ color: '#334155', fontSize: '0.875rem', marginTop: '4px', fontWeight: 600 }}>
-            Interactive classroom sandbox comparing <strong>JEV (Decision Classifier)</strong> vs <strong>LLaMA (Auto-regressive LLM)</strong>
+          <p style={{ color: '#475569', fontSize: '0.85rem', marginTop: '2px', fontWeight: 600 }}>
+            Comparing JEV (Decision Classifier) vs LLaMA (Generative LLM)
           </p>
         </div>
 
@@ -63,13 +63,13 @@ export default function App() {
             gap: '6px'
           }}>
             <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: ollamaStatus.available ? '#10b981' : '#64748b' }} />
-            {ollamaStatus.available ? `Local Ollama Active (${ollamaStatus.activeModel})` : 'Offline Simulator Active'}
+            {ollamaStatus.available ? `Ollama (${ollamaStatus.activeModel})` : 'Simulator Mode'}
           </div>
 
           <button 
             className="btn-outline" 
             onClick={checkOllamaStatus}
-            title="Refresh local Ollama backend detection"
+            title="Refresh backend detection"
             style={{ padding: '6px 10px' }}
           >
             <RefreshCw size={14} />
@@ -79,29 +79,29 @@ export default function App() {
       </header>
 
       {/* CENTER-ALIGNED NAVIGATION TABS */}
-      <nav style={{ display: 'flex', justifyContent: 'center', gap: '16px', marginBottom: '28px', flexWrap: 'wrap' }}>
+      <nav style={{ display: 'flex', justifyContent: 'center', gap: '16px', marginBottom: '24px', flexWrap: 'wrap' }}>
         <button
           className={activeTab === 'playground' ? 'btn-primary' : 'btn-outline'}
           onClick={() => setActiveTab('playground')}
-          style={{ padding: '12px 24px', fontSize: '0.95rem' }}
+          style={{ padding: '10px 20px', fontSize: '0.9rem' }}
         >
-          <Zap size={18} /> Interactive Playground
+          <Zap size={16} /> Interactive Playground
         </button>
 
         <button
           className={activeTab === 'metrics' ? 'btn-primary' : 'btn-outline'}
           onClick={() => setActiveTab('metrics')}
-          style={{ padding: '12px 24px', fontSize: '0.95rem' }}
+          style={{ padding: '10px 20px', fontSize: '0.9rem' }}
         >
-          <Activity size={18} /> Benchmark Metrics
+          <Activity size={16} /> Benchmark Metrics
         </button>
 
         <button
           className={activeTab === 'code' ? 'btn-primary' : 'btn-outline'}
           onClick={() => setActiveTab('code')}
-          style={{ padding: '12px 24px', fontSize: '0.95rem' }}
+          style={{ padding: '10px 20px', fontSize: '0.9rem' }}
         >
-          <Terminal size={18} /> Student Python Code
+          <Terminal size={16} /> Student Python Code
         </button>
       </nav>
 
@@ -113,8 +113,8 @@ export default function App() {
       </main>
 
       {/* FOOTER */}
-      <footer style={{ marginTop: '48px', paddingTop: '20px', borderTop: '1px solid #cbd5e1', textAlign: 'center', color: '#475569', fontSize: '0.8rem', fontWeight: 600 }}>
-        🎓 Built for Educational Purpose & Student Workshops • TechTitans Academy
+      <footer style={{ marginTop: '40px', paddingTop: '16px', borderTop: '1px solid #cbd5e1', textAlign: 'center', color: '#64748b', fontSize: '0.8rem', fontWeight: 600 }}>
+        TechTitans Academy • JEV vs LLaMA Educational Sandbox
       </footer>
 
     </div>
