@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-dark: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #ffffff;
+  --border-color: #cbd5e1;
+  --border-highlight: #4f46e5;
+  
+  --primary-jev: #059669;
+  --primary-jev-light: #ecfdf5;
+  
+  --primary-llama: #7c3aed;
+  --primary-llama-light: #f5f3ff;
+  
+  --text-main: #0f172a;
+  --text-muted: #334155;
+  --text-dim: #475569;
+  
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+  
+  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f1f5f9;
+  color: var(--text-main);
+  font-family: var(--font-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(124, 58, 237, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 20%, rgba(5, 150, 105, 0.05) 0%, transparent 35%);
+  background-attachment: fixed;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Light Card Styling */
+.glass-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 18px -2px rgba(15, 23, 42, 0.08);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-panel:hover {
+  border-color: #94a3b8;
+  box-shadow: 0 8px 24px -2px rgba(15, 23, 42, 0.12);
+}
+
+/* Glow & Borders */
+.jev-border {
+  border: 2px solid #10b981 !important;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.2) !important;
+}
+
+.llama-border {
+  border: 2px solid #8b5cf6 !important;
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.2) !important;
+}
+
+.jev-badge {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #6ee7b7;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.llama-badge {
+  background: #f5f3ff;
+  color: #6d28d9;
+  border: 1px solid #c4b5fd;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.winner-badge-llama {
+  background: #6d28d9;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.winner-badge-jev {
+  background: #047857;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Animations */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.streaming-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background-color: var(--primary-llama);
+  margin-left: 2px;
+  animation: cursor-blink 0.8s infinite;
+  vertical-align: middle;
+}
+
+.gradient-text-jev {
+  color: #047857;
+}
+
+.gradient-text-llama {
+  color: #6d28d9;
+}
+
+.gradient-text-title {
+  color: #0f172a;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #4338ca;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(67, 56, 202, 0.25);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #3730a3;
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-outline {
+  background: #ffffff;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+/* Code block */
+.code-block {
+  font-family: var(--font-mono);
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: var(--radius-md);
+  padding: 14px;
+  color: #38bdf8;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  overflow-x: auto;
+}
