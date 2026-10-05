@@ -1,16 +1,47 @@
-# React + Vite
+# 🧠 JEV AI vs LLaMA Model Educational Lab
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> 🎓 **Educational Purpose Notice:**  
+> This project is designed exclusively as an **interactive educational sandbox** for students, educators, and software architects. It provides a visual and empirical demonstration comparing **System 1 Non-Autoregressive Decision Engines (JEV)** with **System 2 Auto-regressive Generative Transformers (LLaMA)**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 Overview
 
-## React Compiler
+When building modern AI-powered applications, choosing the right model paradigm is critical:
+* **JEV AI Model (System 1 Decision Engine):** Non-autoregressive model optimized for sub-10ms intent classification, deterministic schema routing, zero hallucination risk, and 100x lower latency.
+* **LLaMA Model (System 2 Generative LLM):** Auto-regressive transformer model optimized for open-ended creative writing, storytelling, multi-step Chain-of-Thought reasoning, and fluid natural language generation.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🚀 Getting Started for Students
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### 1. Web Application Interactive Playground
+```bash
+# Clone the repository
+git clone https://github.com/TechTitans-Academy/jev-vs-llama-lab.git
+cd jev-vs-llama-lab
+
+# Install dependencies and start local server
+npm install
+npm run dev
+```
+Open **[http://localhost:5173/](http://localhost:5173/)** in your browser!
+
+### 2. Standalone Python Terminal Demos
+```bash
+cd python_demos
+
+# Run JEV Decision Classifier (sub-1ms execution)
+python3 demo_jev.py
+
+# Run Benchmark comparing latency and throughput
+python3 benchmark_comparison.py
+
+# Run LLaMA model demo
+python3 demo_llama.py
+```
+
+---
+
+## 🏫 Developed for TechTitans Academy Workshops & Computer Science Labs
+Created for classroom lectures and hands-on AI architecture workshops.

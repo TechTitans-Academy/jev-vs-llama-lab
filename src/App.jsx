@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, Terminal, Zap, RefreshCw } from 'lucide-react';
+import { Activity, Terminal, Zap, RefreshCw, GraduationCap, Info } from 'lucide-react';
 
 import InteractivePlayground from './components/InteractivePlayground';
 import MetricsBenchmark from './components/MetricsBenchmark';
@@ -33,6 +33,27 @@ export default function App() {
   return (
     <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '24px 16px 60px 16px' }}>
       
+      {/* EDUCATIONAL DISCLAIMER BANNER */}
+      <div style={{ 
+        background: '#eff6ff', 
+        border: '1px solid #bfdbfe', 
+        color: '#1e40af', 
+        padding: '10px 18px', 
+        borderRadius: '12px', 
+        fontSize: '0.85rem', 
+        fontWeight: 600, 
+        marginBottom: '16px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '10px',
+        boxShadow: '0 2px 6px rgba(30, 64, 175, 0.05)'
+      }}>
+        <GraduationCap size={20} color="#2563eb" style={{ flexShrink: 0 }} />
+        <div>
+          <strong>Educational Workshop Notice:</strong> This interactive lab is created exclusively for educational & student workshop demonstrations comparing <strong>System 1 Decision Engine (JEV)</strong> vs <strong>System 2 Auto-regressive LLM (LLaMA)</strong>.
+        </div>
+      </div>
+
       {/* HEADER BAR */}
       <header className="glass-panel" style={{ padding: '20px 24px', marginBottom: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
         
@@ -114,7 +135,7 @@ export default function App() {
 
       {/* FOOTER */}
       <footer style={{ marginTop: '48px', paddingTop: '20px', borderTop: '1px solid #cbd5e1', textAlign: 'center', color: '#475569', fontSize: '0.8rem', fontWeight: 600 }}>
-        JEV AI vs LLaMA Educational Lab • Built for Classroom & Student Workshops
+        🎓 Built for Educational Purpose & Student Workshops • TechTitans Academy
       </footer>
 
     </div>
