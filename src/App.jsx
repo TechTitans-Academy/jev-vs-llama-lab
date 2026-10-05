@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, Terminal, Zap, RefreshCw, Sparkles } from 'lucide-react';
+import { Activity, Terminal, Zap, RefreshCw } from 'lucide-react';
 
 import InteractivePlayground from './components/InteractivePlayground';
 import MetricsBenchmark from './components/MetricsBenchmark';
@@ -33,36 +33,6 @@ export default function App() {
   return (
     <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '24px 16px 60px 16px' }}>
       
-      {/* QUICK REFERENCE 1-LINE GUIDANCE CARD */}
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
-        gap: '16px', 
-        marginBottom: '20px' 
-      }}>
-        {/* JEV 1-LINE EXPLANATION */}
-        <div style={{ background: '#ecfdf5', border: '1px solid #a7f3d0', borderRadius: '12px', padding: '14px 18px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
-            <Zap size={18} color="#059669" />
-            <h4 style={{ fontSize: '0.95rem', fontWeight: 800, color: '#047857' }}>When to use JEV AI Model</h4>
-          </div>
-          <p style={{ fontSize: '0.85rem', color: '#065f46', lineHeight: '1.5', fontWeight: 600 }}>
-            ⚡ <strong>Use JEV when you need:</strong> Sub-10ms intent classification, automated fraud scoring, CI/CD code security guardrails, and 100% deterministic JSON schemas with zero hallucination risk.
-          </p>
-        </div>
-
-        {/* LLAMA 1-LINE EXPLANATION */}
-        <div style={{ background: '#f5f3ff', border: '1px solid #ddd6fe', borderRadius: '12px', padding: '14px 18px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
-            <Sparkles size={18} color="#7c3aed" />
-            <h4 style={{ fontSize: '0.95rem', fontWeight: 800, color: '#6d28d9' }}>When to use LLaMA Model</h4>
-          </div>
-          <p style={{ fontSize: '0.85rem', color: '#5b21b6', lineHeight: '1.5', fontWeight: 600 }}>
-            🦙 <strong>Use LLaMA when you need:</strong> Open-ended creative writing, fluid storytelling, empathetic conversational chat, and multi-step Chain-of-Thought math or logic reasoning.
-          </p>
-        </div>
-      </div>
-
       {/* HEADER BAR */}
       <header className="glass-panel" style={{ padding: '20px 24px', marginBottom: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
         
